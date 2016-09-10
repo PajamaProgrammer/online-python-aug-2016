@@ -16,6 +16,7 @@ $(document).ready(function(){
         //            function(res) { $('#posts').html(res) }
         $.post('/posts/create', $(this).serialize(), function(res) {
             $('#posts').html(res);
+            console.log(res);
         });
         // we have to return false for it to be a single page application because without it jQuery's
         // submit function will cause a refresh of the page which would defeat the point of AJAX
