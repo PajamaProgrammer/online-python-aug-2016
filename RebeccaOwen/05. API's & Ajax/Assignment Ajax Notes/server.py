@@ -64,8 +64,6 @@ def destroy(id):
 
     db.query_db(query, data)
 
-    return redirect('/notes')
-
     query = queries['index']
     notes = db.query_db(query)
 

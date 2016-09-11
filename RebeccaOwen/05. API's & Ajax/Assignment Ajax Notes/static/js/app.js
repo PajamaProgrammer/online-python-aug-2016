@@ -32,6 +32,14 @@ $(document).ready(function(){
 
     });
 
+    $('body').on("click", 'a', function(){
+        var href = $(this)[0].href;
+        $.get(href, function(res) {
+            $('#notes').html(res);
+        });
+        return false;
+    });
+
     $('body').on("focusin", 'textarea', function(){
         //console.log($(this).closest('div').find('.updateBtn').attr('class', 'updateBtn'));
         $(this).closest('div').find('.updateBtn').attr('class', 'updateBtn')
